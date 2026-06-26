@@ -43,13 +43,15 @@ DATABASE_URL="postgresql://..." npm run db:seed --workspace @nordstrand/api
 
 ## 4. Stripe webhook (produktion)
 
-I Stripe Dashboard → Webhooks → Add endpoint:
+Webhook är konfigurerad mot:
 
 `https://nordstrand-api.onrender.com/api/v1/webhooks/stripe`
 
 Events: `checkout.session.completed`, `checkout.session.expired`
 
-Kopiera signing secret → `STRIPE_WEBHOOK_SECRET` på Render.
+Signing secret sätts som `STRIPE_WEBHOOK_SECRET` på Render (inte i git).
+
+**Testköp (Stripe testläge):** kort `4242 4242 4242 4242`, valfritt datum/CVC.
 
 ## Lokal utveckling
 
