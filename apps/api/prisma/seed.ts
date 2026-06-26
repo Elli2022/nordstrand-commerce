@@ -8,7 +8,7 @@ const products = [
       "Stonewashed linnekudde i naturlig sandton. 50×50 cm, innerkudde ingår.",
     priceCents: 44900,
     stock: 24,
-    imageUrl: "/images/products/linnekudde-nord.png",
+    imageUrl: "/images/products/linnekudde-nord.webp",
     category: "Textil"
   },
   {
@@ -18,7 +18,7 @@ const products = [
       "Mattglaserad skål i stengods, gjord i liten serie i Skåne. Ø 18 cm.",
     priceCents: 29900,
     stock: 15,
-    imageUrl: "/images/products/keramikskal-handgjord.png",
+    imageUrl: "/images/products/keramikskal-handgjord.webp",
     category: "Keramik"
   },
   {
@@ -28,7 +28,7 @@ const products = [
       "Tunn ullplaid vävd i Italien. Mjuk, temperaturreglerande och tidlös.",
     priceCents: 129900,
     stock: 8,
-    imageUrl: "/images/products/ullplaid-gra.png",
+    imageUrl: "/images/products/ullplaid-gra.webp",
     category: "Textil"
   },
   {
@@ -38,7 +38,7 @@ const products = [
       "Sojaljus med toner av en, ceder och varm björk. Brinntid ca 45 h.",
     priceCents: 34900,
     stock: 40,
-    imageUrl: "/images/products/doftljus-en.png",
+    imageUrl: "/images/products/doftljus-en.webp",
     category: "Hem"
   },
   {
@@ -48,7 +48,7 @@ const products = [
       "Oljad ekbricka med upphöjda kanter. Perfekt för frukost eller ostbricka.",
     priceCents: 59900,
     stock: 12,
-    imageUrl: "/images/products/serveringsbricka-ek.png",
+    imageUrl: "/images/products/serveringsbricka-ek.webp",
     category: "Kök"
   }
 ];

@@ -2,7 +2,7 @@
 
 import { formatPrice } from "@nordstrand/shared";
 import type { ProductDto } from "@nordstrand/shared";
-import Image from "next/image";
+import { ProductImage } from "@/components/product-image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useCart } from "@/hooks/use-cart";
@@ -99,11 +99,10 @@ export function CartPageClient() {
               className="flex gap-4 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4"
             >
               <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl">
-                <Image
+                <ProductImage
                   src={line.product.imageUrl}
                   alt={line.product.name}
-                  fill
-                  className="object-cover"
+                  sizes="96px"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

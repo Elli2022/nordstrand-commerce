@@ -7,12 +7,7 @@ const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(rootDir, "../../"),
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com"
-      }
-    ]
+    formats: ["image/avif", "image/webp"]
   }
 };
 

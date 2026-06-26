@@ -2,10 +2,10 @@
 
 import { formatPrice } from "@nordstrand/shared";
 import type { ProductDto } from "@nordstrand/shared";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "@/hooks/use-cart";
+import { ProductImage } from "@/components/product-image";
 
 export function AddToCartButton({
   productId,
@@ -39,17 +39,22 @@ export function AddToCartButton({
   );
 }
 
-export function ProductCard({ product }: { product: ProductDto }) {
+export function ProductCard({
+  product,
+  priority = false
+}: {
+  product: ProductDto;
+  priority?: boolean;
+}) {
   return (
     <article className="group overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--card)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <Link href={`/products/${product.slug}`} className="block">
         <div className="relative aspect-[4/5] overflow-hidden">
-          <Image
+          <ProductImage
             src={product.imageUrl}
             alt={product.name}
-            fill
+            priority={priority}
             className="object-cover transition duration-500 group-hover:scale-[1.03]"
-            sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
       </Link>

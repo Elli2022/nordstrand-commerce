@@ -18,7 +18,23 @@ const body = Inter({
 export const metadata: Metadata = {
   title: "Nordstrand — Nordisk heminredning",
   description:
-    "Utvald heminredning och hantverk från Norden. Textil, keramik och köksdetaljer med säker checkout."
+    "Utvald heminredning och hantverk från Norden. Textil, keramik och köksdetaljer med säker checkout.",
+  metadataBase: new URL("https://nordstrand-commerce.netlify.app"),
+  openGraph: {
+    title: "Nordstrand — Nordisk heminredning",
+    description:
+      "Headless e-handel med Next.js, Express API, PostgreSQL och Stripe Checkout.",
+    url: "https://nordstrand-commerce.netlify.app",
+    siteName: "Nordstrand",
+    locale: "sv_SE",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nordstrand — Nordisk heminredning",
+    description:
+      "Headless e-handel med Next.js, Express API, PostgreSQL och Stripe Checkout."
+  }
 };
 
 export default function RootLayout({

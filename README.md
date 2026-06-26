@@ -2,7 +2,7 @@
 
 Headless e-commerce demo built to be **sellable to clients** and **hireable at larger companies** — one monorepo that shows storefront, API, database, payments, and tests.
 
-**Live (coming soon):** storefront on Netlify · API on Render · PostgreSQL on Neon
+**Live:** [Butik](https://nordstrand-commerce.netlify.app) · [API](https://nordstrand-api.onrender.com/health) · PostgreSQL on Neon
 
 ## Why this project exists
 

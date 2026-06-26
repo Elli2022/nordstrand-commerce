@@ -1,11 +1,10 @@
 "use client";
 
 import { formatPrice } from "@nordstrand/shared";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AddToCartButton } from "@/components/product-actions";
+import { ProductImage } from "@/components/product-image";
 import type { ProductDto } from "@nordstrand/shared";
 
 export function ProductDetail({ slug }: { slug: string }) {
@@ -42,13 +41,11 @@ export function ProductDetail({ slug }: { slug: string }) {
   return (
     <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
       <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-[var(--border)]">
-        <Image
+        <ProductImage
           src={product.imageUrl}
           alt={product.name}
-          fill
-          className="object-cover"
-          sizes="(max-width: 1024px) 100vw, 50vw"
           priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </div>
       <div className="lg:sticky lg:top-8 lg:self-start">
