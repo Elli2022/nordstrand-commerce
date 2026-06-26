@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f0e8;
+  --foreground: #1a1614;
+  --accent: #2a4545;
+  --accent-hover: #1f3535;
+  --muted: #524a44;
+  --muted-soft: #6f655e;
+  --card: #fffcf8;
+  --border: #ddd2c4;
+  --success: #2f5d4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1.5px solid var(--foreground);
+  color: var(--foreground);
+  background: transparent;
+  padding: 0.7rem 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.chip {
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 0.45rem 1rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.chip-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}

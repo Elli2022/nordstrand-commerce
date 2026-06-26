@@ -1,0 +1,25 @@
+{
+  "name": "nordstrand-commerce",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Headless commerce demo — monorepo with API, storefront, PostgreSQL and Stripe",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @nordstrand/api & npm run dev --workspace @nordstrand/web",
+    "dev:api": "npm run dev --workspace @nordstrand/api",
+    "dev:web": "npm run dev --workspace @nordstrand/web",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspace @nordstrand/api",
+    "lint": "npm run lint --workspaces --if-present",
+    "db:up": "docker compose up -d postgres",
+    "db:migrate": "npm run db:migrate --workspace @nordstrand/api",
+    "db:seed": "npm run db:seed --workspace @nordstrand/api",
+    "db:setup": "npm run db:up && sleep 2 && npm run db:migrate && npm run db:seed"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

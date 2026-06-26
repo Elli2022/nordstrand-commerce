@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: nordstrand-api
+    runtime: docker
+    dockerfilePath: ./apps/api/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: CHECKOUT_MODE
+        value: stripe
+      - key: CORS_ORIGIN
+        sync: false
+      - key: API_PORT
+        value: 4000
+      - key: API_BASE_URL
+        sync: false
