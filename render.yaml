@@ -17,7 +17,5 @@ services:
         value: stripe
       - key: CORS_ORIGIN
         sync: false
-      - key: API_PORT
-        value: 4000
       - key: API_BASE_URL
         sync: false

@@ -3,7 +3,9 @@ import { z } from "zod";
 
 const envSchema = z.object({
   DATABASE_URL: z.string().url(),
-  API_PORT: z.coerce.number().default(4000),
+  API_PORT: z.coerce
+    .number()
+    .default(Number(process.env.PORT ?? 4000)),
   CORS_ORIGIN: z.string().default("http://localhost:3000"),
   STRIPE_SECRET_KEY: z.string().min(1),
   STRIPE_WEBHOOK_SECRET: z.string().default("whsec_pending"),
