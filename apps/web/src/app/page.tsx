@@ -1,12 +1,7 @@
-import { getProducts } from "@/lib/api";
-import { ShopCatalog } from "@/components/shop-catalog";
+import { ShopCatalogLoader } from "@/components/shop-catalog-loader";
 import { TrustBar } from "@/components/trust-bar";
 
-export const dynamic = "force-dynamic";
-
-export default async function HomePage() {
-  const products = await getProducts();
-
+export default function HomePage() {
   return (
     <div>
       <section className="mb-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
@@ -31,7 +26,7 @@ export default async function HomePage() {
       </section>
 
       <TrustBar />
-      <ShopCatalog products={products} />
+      <ShopCatalogLoader />
     </div>
   );
 }
