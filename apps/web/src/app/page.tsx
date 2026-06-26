@@ -1,7 +1,12 @@
-import { ShopCatalogLoader } from "@/components/shop-catalog-loader";
+import { ShopCatalog } from "@/components/shop-catalog";
 import { TrustBar } from "@/components/trust-bar";
+import { getProducts } from "@/lib/api";
 
-export default function HomePage() {
+export const revalidate = 120;
+
+export default async function HomePage() {
+  const products = await getProducts();
+
   return (
     <div>
       <section className="mb-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
@@ -26,7 +31,7 @@ export default function HomePage() {
       </section>
 
       <TrustBar />
-      <ShopCatalogLoader />
+      <ShopCatalog products={products} />
     </div>
   );
 }

@@ -1,18 +1,26 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
 
 import type { ProductDto } from "@nordstrand/shared";
+import { catalogFallback } from "@/data/catalog-fallback";
+
+const PRODUCTS_TIMEOUT_MS = 8_000;
 
 export async function getProducts(): Promise<ProductDto[]> {
-  const response = await fetch(`${API_URL}/api/v1/products`, {
-    next: { revalidate: 60 }
-  });
+  try {
+    const response = await fetch(`${API_URL}/api/v1/products`, {
+      next: { revalidate: 120 },
+      signal: AbortSignal.timeout(PRODUCTS_TIMEOUT_MS)
+    });
 
-  if (!response.ok) {
-    throw new Error("Failed to load products");
+    if (!response.ok) {
+      throw new Error("Failed to load products");
+    }
+
+    const json = await response.json();
+    return json.data as ProductDto[];
+  } catch {
+    return catalogFallback;
   }
-
-  const json = await response.json();
-  return json.data;
 }
 
 export async function getProduct(slug: string): Promise<ProductDto | null> {

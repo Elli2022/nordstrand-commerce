@@ -44,6 +44,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv" className={`${display.variable} ${body.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://nordstrand-api.onrender.com" />
+        <link
+          rel="preload"
+          href="/images/products/linnekudde-nord.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          href="/images/products/keramikskal-handgjord.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          href="/images/products/ullplaid-gra.webp"
+          as="image"
+          type="image/webp"
+        />
+      </head>
       <body>
         <CartProvider>
           <header className="border-b border-[var(--border)] bg-[var(--card)]/95 backdrop-blur">
