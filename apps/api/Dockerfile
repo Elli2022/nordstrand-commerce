@@ -26,4 +26,4 @@ COPY --from=build /app/apps/api/prisma ./apps/api/prisma
 COPY --from=build /app/packages/shared ./packages/shared
 
 EXPOSE 4000
-CMD ["sh", "-c", "npm run db:migrate:deploy --workspace @nordstrand/api && npm run start --workspace @nordstrand/api"]
+CMD ["npm", "run", "start", "--workspace", "@nordstrand/api"]

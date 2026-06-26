@@ -2,7 +2,7 @@ import "./load-env.js";
 import { z } from "zod";
 
 const envSchema = z.object({
-  DATABASE_URL: z.string().url(),
+  DATABASE_URL: z.string().min(1),
   API_PORT: z.coerce
     .number()
     .default(Number(process.env.PORT ?? 4000)),
