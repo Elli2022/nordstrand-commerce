@@ -41,6 +41,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Build shared package
+        run: npm run build --workspace @nordstrand/shared
+
       - name: Generate Prisma client
         run: npm run db:generate --workspace @nordstrand/api
 
