@@ -11,7 +11,7 @@ export default function Error({
     <div className="max-w-xl">
       <h1 className="mb-4 text-3xl">Något gick fel</h1>
       <p className="mb-4 text-[var(--muted)]">
-        Butiken kunde inte laddas. Kontrollera att API:t körs på port 4000.
+        Butiken kunde inte laddas just nu. Försök igen om en stund.
       </p>
       <p className="mb-6 rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 text-sm text-red-800">
         {error.message}
