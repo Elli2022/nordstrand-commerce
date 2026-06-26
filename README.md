@@ -25,6 +25,13 @@ Built as a portfolio flagship to demonstrate end-to-end commerce engineering: ty
   <img src="https://img.shields.io/badge/Node.js_22-2563eb?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
 </p>
 
+<p align="center">
+  <a href="https://nordstrand-commerce.netlify.app">
+    <img src="./docs/screenshots/storefront.jpg" alt="Nordstrand Commerce storefront — live on Netlify" width="920">
+  </a>
+</p>
+<p align="center"><sub>Live storefront · Next.js 15 · ISR catalog · optimized WebP product images</sub></p>
+
 ---
 
 ## Live environment
